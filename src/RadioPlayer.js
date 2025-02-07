@@ -32,7 +32,8 @@ const RadioPlayer = () => {
     if (isPlaying) {
       audioRef.current.play();
     }
-  }, [station]);
+    }, [station, isPlaying]);  // Dodaliśmy isPlaying do tablicy zależności
+
 
   useEffect(() => {
     audioRef.current.volume = volume;
